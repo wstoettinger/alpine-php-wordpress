@@ -20,7 +20,7 @@ RUN echo 'http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositor
     php7-pdo_mysql php7-mysqli php7-session \
     php7-gd php7-iconv php7-mcrypt \
     php7-curl php7-opcache php7-ctype php7-apcu \
-    php7-intl php7-bcmath php7-dom php7-xmlreader mysql-client curl && apk add -u musl
+    php7-intl php7-bcmath php7-dom php7-xmlreader mysql-client openssh-client git curl rsync && apk add -u musl
 
 RUN rm -rf /var/cache/apk/*
 
@@ -31,9 +31,11 @@ ENV TERM="xterm" \
     DB_PASS=""
 
 
+
+
 RUN sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php7/php.ini && \
-    sed -i 's/nginx:x:100:101:Linux User,,,:\/var\/www\/localhost\/htdocs:\/sbin\/nologin/nginx:x:100:101:Linux User,,,:\/var\/www\/localhost\/htdocs:\/bin\/bash/g' /etc/passwd && \
-    sed -i 's/nginx:x:100:101:Linux User,,,:\/var\/www\/localhost\/htdocs:\/sbin\/nologin/nginx:x:100:101:Linux User,,,:\/var\/www\/localhost\/htdocs:\/bin\/bash/g' /etc/passwd- && \
+    sed -i "s/nginx:x:100:101:nginx:\/var\/lib\/nginx:\/sbin\/nologin/nginx:x:100:101:nginx:\/DATA:\/bin\/bash/g" /etc/passwd && \
+    sed -i "s/nginx:x:100:101:nginx:\/var\/lib\/nginx:\/sbin\/nologin/nginx:x:100:101:nginx:\/DATA:\/bin\/bash/g" /etc/passwd- && \
     ln -s /usr/bin/php7 /usr/bin/php && \
     ln -s /sbin/php-fpm7 /sbin/php-fpm
 
@@ -42,7 +44,7 @@ ADD files/php-fpm.conf /etc/php7/
 ADD files/run.sh /
 RUN chmod +x /run.sh
 
-RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/bin/wp-cli
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && mv wp-cli.phar /usr/bin/wp-cli && chown nginx:nginx /usr/bin/wp-cli
 
 EXPOSE 80
 VOLUME ["/DATA"]
