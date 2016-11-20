@@ -1,6 +1,6 @@
 ##### This image is being maintained. Fork it and change it fit your needs. Upgrade your site using the upgrade strategy on wordpressdocker.com
 
-http://www.wordpressdocker.com/docker/Upgrading-Containers/
+Full documentation for this project can be found here: http://www.wordpressdocker.com/
 
 # Lightweight WordPress PHP7 PHP-FPM7 & Nginx Docker Image
 
