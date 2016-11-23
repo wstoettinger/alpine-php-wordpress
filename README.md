@@ -12,7 +12,7 @@ Lightwight Docker image for the (latest) PHP-FPM and Nginx to run WordPress base
   * [Nginx](http://pkgs.alpinelinux.org/package/main/x86/nginx) 1.10.1
   * Memory usage is around 50mb on a simple install.
 
-# Our Product
+## Our Product
 
 A bit of shameless self-promotion. We are building a freemium Docker hosting control panel which does everything taught in this tutorial automatically and much more, backups, DNS, etc. For example deploy 10 WordPress sites on a $5 Digital Ocean Droplet in around 10 minutes. Save $95 compared to WPEngine!. Sign up for http://www.devoply.com and make your life much easier!
   
