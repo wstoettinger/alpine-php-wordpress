@@ -91,7 +91,7 @@ php_flag[display_errors] = on
 
 Additional documentation on http://www.wordpressdocker.com
 
-## Our Product
+## Control Panel
 
 We are building a Docker hosting control panel which does everything taught in this tutorial automatically and much more, backups, staging/dev/prod, code editor, Github/Bitbucket deployments, DNS, **WordPress Management like ManageWP**, etc. For example deploy 10 WordPress sites on a $5 Digital Ocean Droplet in around 10 minutes. Save $95 compared to WPEngine!.[http://www.devoply.com](http://www.devoply.com)!
 
