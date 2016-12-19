@@ -97,6 +97,6 @@ https://gitter.im/etopian/devoply
 
 ## Docker WordPress Control Panel
 
-DEVOPly is a free hosting control panel which does everything taught in this tutorial automatically and much more, backups, staging/dev/prod, code editor, Github/Bitbucket deployments, DNS, WordPress Management. http://www.devoply.com
+DEVOPly is a free hosting control panel which does everything taught in this tutorial automatically and much more, backups, staging/dev/prod, code editor, Github/Bitbucket deployments, DNS, WordPress Management. https://www.devoply.com
 
 
