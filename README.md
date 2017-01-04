@@ -8,8 +8,8 @@ Lightwight Docker image for the (latest) PHP-FPM and Nginx to run WordPress base
 
 * Image size only ~131MB !
 * Very new packages (alpine:edge) 2016-07-21:
-  * [PHP](http://pkgs.alpinelinux.org/package/main/x86/php) 7.0.8
-  * [Nginx](http://pkgs.alpinelinux.org/package/main/x86/nginx) 1.10.1
+  * [PHP](http://pkgs.alpinelinux.org/package/main/x86/php) 7.0.13
+  * [Nginx](http://pkgs.alpinelinux.org/package/main/x86/nginx) nginx/1.10.2
   * Memory usage is around 50mb on a simple install.
 
 ## A simple example
