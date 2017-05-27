@@ -50,7 +50,6 @@ RUN echo 'http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositor
     rsync \
     musl \
     && apk --update --no-cache add tar
-
 RUN rm -rf /var/cache/apk/*
 
 ENV TERM="xterm" \

@@ -2,7 +2,9 @@
 
 Full documentation for this project can be found here: http://www.wordpressdocker.com/
 
-# Lightweight WordPress PHP7 PHP-FPM7 & Nginx Docker Image
+We also have a development container: https://github.com/etopian/alpine-php-wordpress-dev
+
+# Lightweight WordPress PHP7 PHP-FPM7 & Nginx Docker Production Image
 
 Lightwight Docker image for the (latest) PHP-FPM and Nginx to run WordPress based on [AlpineLinux](http://alpinelinux.org)
 
