@@ -6,6 +6,7 @@ $filepath = '/DATA/htdocs/wp-config.php';
 $define = "/** The Database Collate type. Don't change this if in doubt. */";
 
 $ssl_content = <<<'EOF'
+/** DEVOPly Settings */
 if(isset(($_SERVER['HTTP_X_FORWARDED_PROTO'] )) ){
 if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https'){
 if(!defined('WP_HOME')){
@@ -14,6 +15,8 @@ if(!defined('WP_HOME')){
 	define('FORCE_SSL_ADMIN', true);
 
 	$_SERVER['HTTPS']='on';
+	define('WP_REDIS_HOST', DB_HOST);
+	define('WP_CACHE_KEY_SALT', DB_NAME);
 }
 }
 }
