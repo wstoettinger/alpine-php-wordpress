@@ -25,6 +25,7 @@ RUN echo 'http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositor
     php7-json \
     php7-zlib \
     php7-xml \
+    php7-simplexml \
     php7-pdo \
     php7-phar \
     php7-openssl \
